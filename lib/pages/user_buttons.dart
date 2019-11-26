@@ -18,8 +18,8 @@ class UserButtons extends StatelessWidget {
           ),
           child: IconButton(
             iconSize: 36,
-            onPressed: () => onReload(),
-            icon: Icon(Icons.refresh),
+            onPressed: onReload == null? null : () => onReload(),
+            icon: const Icon(Icons.refresh),
           ),
         ),
         Ink(
@@ -30,8 +30,8 @@ class UserButtons extends StatelessWidget {
           child: IconButton(
             iconSize: 36,
             color: Colors.black,
-            onPressed: () => onNext(),
-            icon: Icon(Icons.arrow_forward),
+            onPressed: onReload == null ? null : () => onNext(),
+            icon: const Icon(Icons.arrow_forward),
           ),
         ),
       ],
